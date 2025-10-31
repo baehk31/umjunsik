@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>엄랭 웹 IDE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>엄랭 웹 IDE</h1>
-    <textarea id="code" placeholder="엄랭 코드를 여기에 입력..."></textarea>
-    <button id="runBtn">실행</button>
-    <pre id="output"></pre>
-
+    <div class="wrap">
+        <h1>엄랭 웹 IDE</h1>
+        <div class="editor-row">
+            <textarea id="code" aria-label="code"></textarea>
+            <div class="controls">
+                <button id="runBtn">실행</button>
+                <button id="clearOut">출력 초기화</button>
+                <button id="sampleBtn">샘플 넣기</button>
+            </div>
+        </div>
+        <label>출력</label>
+        <pre id="output"></pre>
+        <div class="notes">설명: '.' = +1, ',' = -1, 공백은 곱셈, 변수는 '어' 반복(예: 어, 어어). 엄으로 대입, 식...! 숫자출력, 식...ㅋ 문자출력</div>
+    </div>
     <script src="umjunsik.js"></script>
     <script src="script.js"></script>
 </body>
